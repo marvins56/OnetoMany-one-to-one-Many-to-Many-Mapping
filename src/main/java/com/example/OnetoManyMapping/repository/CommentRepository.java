@@ -11,6 +11,7 @@ import com.example.OnetoManyMapping.model.Comment;
 
 @Repository
 public interface CommentRepository  extends JpaRepository<Comment,Long>{
+//	method that retrieves comments for a specific post in a pageable format
 	 Page<Comment> findByPostId(Long postId, Pageable pageable);
 	 Optional<Comment> findByIdAndPostId(Long id, Long postId);
 }
