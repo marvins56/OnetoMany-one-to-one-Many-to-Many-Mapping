@@ -19,7 +19,12 @@ import jakarta.validation.constraints.NotNull;
 @Entity
 @Table(name = "comments")
 public class Comment extends AuditModel {
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

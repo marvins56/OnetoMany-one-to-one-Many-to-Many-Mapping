@@ -14,7 +14,12 @@ import jakarta.validation.constraints.Size;
 @Table(name = "posts")
 public class Post extends AuditModel{
 
-	  @Id
+	  /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 
